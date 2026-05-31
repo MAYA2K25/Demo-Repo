@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+
+# Secrets — NEVER push these
+.env
+*.key
+api_keys.txt
+
+# Data & Models (too large for GitHub)
+*.csv
+*.xlsx
+*.pkl
+*.h5
+model_weights/
+data/
+
+# VS Code
+.vscode/
+tempCodeRunnerFile.py
