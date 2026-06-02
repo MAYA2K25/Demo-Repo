@@ -1,17 +1,17 @@
-name=input("Enter your name:")
-age=int(input("Enter your age:"))
-gpa=float(input("Enter your gpa:"))
-enrolled=input("Enter whether you have enrolled Yes/No:")
+def guess(value):
+    for cast in (int,float):
+        try:
+            return type(cast(value))
+            break
+        except ValueError:
+            pass
+    if value.lower() in ("true","false"):
+        return bool
+    return str
 
-print(f"my name is {name}")
-print(f"my age is {age}")
-print(f"My gpa for finals is {gpa}")
+    
 
-if enrolled.lower() == "yes":
-    print(f"{enrolled}, I am Enrolled")
-elif enrolled.lower() == "no":
-    print(f"{enrolled}, I am not Enrolled")
-else:
-    print(f"No input from customer")
+value=input(f"Enter the value:")
 
-print(type(name,age,gpa,enrolled))
+x=guess(value)
+print(x)
